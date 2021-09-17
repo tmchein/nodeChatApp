@@ -32,7 +32,7 @@ const server = http.createServer(app);
 //Create a new instance of socketio for configuration
 const io = socketio(server);
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "../public")));
 
